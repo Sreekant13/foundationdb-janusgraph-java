@@ -1,0 +1,18 @@
+# Java bytecode
+*.class
+/bin/
+/target/
+/build/
+
+# JanusGraph/FoundationDB data (if stored under this folder)
+/data/
+/logs/
+
+# IDE files (adjust as needed)
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+EOF
