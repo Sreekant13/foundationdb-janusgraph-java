@@ -1,18 +1,20 @@
-# Java bytecode
+# Ignore Maven build output
+**/target/
+
+# Ignore compiled classes
 *.class
-/bin/
-/target/
-/build/
 
-# JanusGraph/FoundationDB data (if stored under this folder)
-/data/
-/logs/
+# If you ever use Gradle:
+**/build/
 
-# IDE files (adjust as needed)
-*.iml
+# JanusGraph/FoundationDB data or logs under this tree
+**/data/
+**/logs/
+
+# IntelliJ / IDE files (uncomment if you use one)
 .idea/
+*.iml
 .vscode/
 
 # OS files
 .DS_Store
-EOF
