@@ -1,20 +1,11 @@
-# Ignore Maven build output
-**/target/
+# Maven build output
+/target/
+/**/target/
 
-# Ignore compiled classes
+/.idea/
+/*.iml
+*.log
 *.class
 
-# If you ever use Gradle:
-**/build/
-
-# JanusGraph/FoundationDB data or logs under this tree
-**/data/
-**/logs/
-
-# IntelliJ / IDE files (uncomment if you use one)
-.idea/
-*.iml
-.vscode/
-
-# OS files
 .DS_Store
+Thumbs.db
