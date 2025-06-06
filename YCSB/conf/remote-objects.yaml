@@ -1,0 +1,12 @@
+#hosts: [10.10.1.2]
+#port: 8182
+#serializer: { 
+#    className: org.apache.tinkerpop.gremlin.util.ser.GraphBinaryMessageSerializerV1,
+#    config: {ioRegistries: [org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry],#
+#            resultIterationBatchSize: 512,
+#             maxContentLength: 524288
+#    }
+#}
+hosts: [10.10.1.2]
+port: 8182
+serializer: { className: org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0, config: { ioRegistries: [org.janusgraph.graphdb.tinkerpop.JanusGraphIoRegistry] }}

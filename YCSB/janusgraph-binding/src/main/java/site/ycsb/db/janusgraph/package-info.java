@@ -16,7 +16,7 @@
  */
 
 /**
- * The YCSB binding for <a href="https://www.foundationdb.org">FoundationDB</a>.
+ * The YCSB binding for <a href="https://janusgraph.org">JanusGraph</a>.
  */
-package site.ycsb.db.foundationdb;
+package site.ycsb.db.janusgraph;
 

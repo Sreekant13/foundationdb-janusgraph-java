@@ -255,6 +255,7 @@ def main():
                    help="""Database to test.""")
     args, remaining = p.parse_known_args()
     ycsb_home = get_ycsb_home()
+    debug(">>> ycsb_home = " + ycsb_home)
 
     # Use JAVA_HOME to find java binary if set, otherwise just use PATH.
     java = "java"
@@ -291,6 +292,7 @@ def main():
 
     if is_distribution():
         db_dir = os.path.join(ycsb_home, binding + "-binding")
+        debug(">>> (source) db_dir = " + db_dir)
         # include top-level conf for when we're a binding-specific artifact.
         # If we add top-level conf to the general artifact, starting here
         # will allow binding-specific conf to override (because it's prepended)
@@ -301,9 +303,10 @@ def main():
         warn("Running against a source checkout. In order to get our runtime "
              "dependencies we'll have to invoke Maven. Depending on the state "
              "of your system, this may take ~30-45 seconds")
-        db_location = "core" if (binding == "basic" or binding == "basicts") else binding
+        db_location = "core" if (binding == "basic" or binding == "basicts") else binding + "-binding"
         project = "core" if (binding == "basic" or binding == "basicts") else binding + "-binding"
         db_dir = os.path.join(ycsb_home, db_location)
+        debug(">>> (source) db_dir = " + db_dir)
         # goes first so we can rely on side-effect of package
         maven_says = get_classpath_from_maven(project)
         # TODO when we have a version property, skip the glob
